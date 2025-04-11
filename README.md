@@ -51,7 +51,7 @@ A full-stack expense tracking application built with React on the frontend and S
 2. Setup the backend:
     ```bash
     cd server/expense
-    mvnw spring-boot:run
+    mvn spring-boot:run
 
 Ensure MongoDB is running and the connection string in application.properties is correct.
 
