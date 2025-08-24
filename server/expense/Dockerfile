@@ -16,9 +16,6 @@ WORKDIR /app
 # Copy the built JAR from build stage
 COPY --from=build /app/target/expense-0.0.1-SNAPSHOT.jar app.jar
 
-# Copy .env file
-COPY .env .env
-
 # Expose port
 EXPOSE 8080
 
