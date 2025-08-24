@@ -10,7 +10,7 @@ const App = () => {
   useEffect(() => {
     const fetchExpenses = async () => {
       try {
-        const response = await fetch("http://localhost:8080/expenses");
+        const response = await fetch("https://expensetracker-2exb.onrender.com/expenses");
         if (!response.ok) {
           throw new Error("Failed to fetch expenses.");
         }
@@ -26,7 +26,7 @@ const App = () => {
 
   const addExpenseHandler = async (expense) => {
     try {
-      const response = await fetch("http://localhost:8080/expenses", {
+      const response = await fetch("https://expensetracker-2exb.onrender.com/expenses", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -47,7 +47,7 @@ const App = () => {
 
   const onEditHandler = async (id, updatedExpense) => {
     try {
-      const response = await fetch(`http://localhost:8080/expenses/${id}`, {
+      const response = await fetch(`https://expensetracker-2exb.onrender.com/expenses/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -77,7 +77,7 @@ const App = () => {
 
   const onDeleteHandler = async (id) => {
     try {
-      const response = await fetch(`http://localhost:8080/expenses/${id}`, {
+      const response = await fetch(`https://expensetracker-2exb.onrender.com/expenses/${id}`, {
         method: "DELETE",
       });
 
