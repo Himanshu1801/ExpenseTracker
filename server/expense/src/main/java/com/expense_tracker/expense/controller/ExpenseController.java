@@ -46,7 +46,7 @@ public class ExpenseController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @PostMapping
+    @PostMapping("/expenses")
     public ResponseEntity<ExpenseModel> addExpense(@RequestBody ExpenseModel expense) {
         ExpenseModel savedExpense = expenseService.addExpense(expense);
         return ResponseEntity.ok(savedExpense);
